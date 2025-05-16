@@ -1,14 +1,22 @@
-# Rebuild Not Null Example
+# NOT NULL Constraint Rebuild Example
 
-This page documents the purpose and usage of the raw SQL tool.
+Demonstrates how to rebuild a table to add a NOT NULL constraint.
 
-## Usage
-
-Paste the following SQL in SQLiteStudio and run:
+## Example SQL
 
 ```sql
--- Content of rebuild_not_null_example.sql
--- (Insert original SQL script here)
+-- Example: Add NOT NULL constraint by rebuilding table
+CREATE TABLE new_table (
+    id INTEGER PRIMARY KEY,
+    data TEXT NOT NULL
+);
+
+INSERT INTO new_table (id, data)
+SELECT id, data
+FROM old_table;
+
+DROP TABLE old_table;
+ALTER TABLE new_table RENAME TO old_table;
 ```
 
 [⬇ Download raw SQL file](rebuild_not_null_example.sql)

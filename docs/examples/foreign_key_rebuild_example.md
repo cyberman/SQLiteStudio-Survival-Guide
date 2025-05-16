@@ -1,14 +1,23 @@
-# Foreign Key Rebuild Example
+# Foreign Key Addition Example
 
-This page documents the purpose and usage of the raw SQL tool.
+How to add a foreign key constraint to an existing table via rebuild.
 
-## Usage
-
-Paste the following SQL in SQLiteStudio and run:
+## Example SQL
 
 ```sql
--- Content of foreign_key_rebuild_example.sql
--- (Insert original SQL script here)
+-- Example: Add foreign key constraint by rebuilding table
+CREATE TABLE new_child (
+    id INTEGER PRIMARY KEY,
+    parent_id INTEGER,
+    FOREIGN KEY (parent_id) REFERENCES parent(id)
+);
+
+INSERT INTO new_child (id, parent_id)
+SELECT id, parent_id
+FROM child;
+
+DROP TABLE child;
+ALTER TABLE new_child RENAME TO child;
 ```
 
 [⬇ Download raw SQL file](foreign_key_rebuild_example.sql)

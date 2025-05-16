@@ -1,6 +1,6 @@
-# Foreign Key Safety
+# Foreign Key Safety Tool
 
-This page documents the purpose and usage of the raw SQL tool.
+Tool for checking foreign key safety in your database.
 
 ## Usage
 

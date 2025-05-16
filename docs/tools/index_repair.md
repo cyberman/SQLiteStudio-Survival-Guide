@@ -1,6 +1,6 @@
-# Index Repair
+# Index Repair Tool
 
-This page documents the purpose and usage of the raw SQL tool.
+Script for repairing/rebuilding lost indexes.
 
 ## Usage
 

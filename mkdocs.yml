@@ -1,36 +1,34 @@
+
 site_name: SQLiteStudio Survival Guide
-site_description: Independent, field-tested documentation of SQLiteStudio's real behavior
-site_author: cyberman
-repo_url: https://github.com/cyberman/SQLiteStudio-Survival-Guide
+
+nav:
+  - Archive:
+      - Manual (PDF): archive/manual-2.1.md
+  - Examples:
+      - Foreign Key Rebuild: examples/foreign_key_rebuild_example.md
+      - Index Loss Example: examples/index_loss_example.md
+      - NOT NULL Example: examples/rebuild_not_null_example.md
+  - Tests:
+      - FK Addition Rebuild: tests/test_fk_addition_rebuild.md
+      - Index Survival on Rename: tests/test_index_survival_on_rename.md
+      - NOT NULL Commit Effect: tests/test_not_null_commit_effect.md
+      - Table Copy Rollback: tests/test_table_copy_rollback_case.md
+  - Tools:
+      - Foreign Key Safety: tools/foreign_key_safety.md
+      - Index Checker: tools/index_checker.md
+      - Index Repair: tools/index_repair.md
+      - Sqlite Commit Watch: tools/sqlite_commit_watch.md
+      - Structure Diff: tools/structure_diff.md
+
 theme:
   name: material
   language: en
-nav:
-  - Home: index.md
-  - Guide:
-      - Overview: guide/01_overview.md
-      - Commits: guide/02_commits.md
-      - Table Rebuilds: guide/03_table_rebuilds.md
-      - Foreign Keys: guide/04_foreign_keys.md
-      - Index & Constraints: guide/05_index_and_constraints.md
-  - Context:
-      - Official Reference: context/00_official_refs.md
-  - Tools:
-      - Commit Watcher: tools/sqlite_commit_watch.sh
-      - Index Checker: tools/index_checker.sql
-      - Structure Diff: tools/structure_diff.sql
-      - Foreign Key Safety: tools/foreign_key_safety.sql
-      - Index Repair: tools/index_repair.sql
-  - Examples:
-      - NOT NULL Rebuild: examples/rebuild_not_null_example.sql
-      - FK Rebuild: examples/foreign_key_rebuild_example.sql
-      - Index Loss: examples/index_loss_example.sql
-  - Tests:
-      - Index Rename: tests/test_index_survival_on_rename.sql
-      - FK Addition: tests/test_fk_addition_rebuild.sql
-      - NOT NULL Effect: tests/test_not_null_commit_effect.sql
-      - Rollback Case: tests/test_table_copy_rollback_case.sql
-  - Archive:
-      - Manual 2.1 (PDF): archive/manual-2.1.pdf
-      - Notes on Manual: archive/notes_on_manual.md
-  - Troubleshooting: troubleshooting/known_pitfalls.md
+  palette:
+    primary: blue
+    accent: light blue
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
