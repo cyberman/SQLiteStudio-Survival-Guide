@@ -1,0 +1,48 @@
+site_name: SQLiteStudio Survival Guide
+site_description: Independent, field-tested documentation of SQLiteStudio's real behavior
+site_author: cyberman
+repo_url: https://github.com/cyberman/sqlitestudio-truth
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - navigation.top
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+  language: en
+nav:
+  - Home: index.md
+  - Guide:
+    - Overview: docs/guide/01_overview.md
+    - Commits: docs/guide/02_commits.md
+    - Table Rebuilds: docs/guide/03_table_rebuilds.md
+    - Foreign Keys: docs/guide/04_foreign_keys.md
+    - Index & Constraints: docs/guide/05_index_and_constraints.md
+  - Context:
+    - Official Reference: docs/context/00_official_refs.md
+  - Tools:
+    - Commit Watcher: docs/tools/sqlite_commit_watch.sh
+    - Index Checker: docs/tools/index_checker.sql
+    - Structure Diff: docs/tools/structure_diff.sql
+    - Foreign Key Safety: docs/tools/foreign_key_safety.sql
+    - Index Repair: docs/tools/index_repair.sql
+  - Examples:
+    - NOT NULL Rebuild: docs/examples/rebuild_not_null_example.sql
+    - FK Rebuild: docs/examples/foreign_key_rebuild_example.sql
+    - Index Loss: docs/examples/index_loss_example.sql
+  - Tests:
+    - Index Rename: docs/tests/test_index_survival_on_rename.sql
+    - FK Addition: docs/tests/test_fk_addition_rebuild.sql
+    - NOT NULL Effect: docs/tests/test_not_null_commit_effect.sql
+    - Rollback Case: docs/tests/test_table_copy_rollback_case.sql
+  - Archive:
+    - Manual 2.1 (PDF): docs/archive/manual-2.1.pdf
+    - Notes on Manual: docs/archive/notes_on_manual.md
+  - Troubleshooting: docs/troubleshooting/known_pitfalls.md
