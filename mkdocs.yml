@@ -26,10 +26,10 @@ theme:
   palette:
     primary: blue
     accent: light blue
+  code_style: monokai
 
 markdown_extensions:
   - admonition
-  - codehilite
   - pymdownx.highlight
   - toc:
       permalink: true
