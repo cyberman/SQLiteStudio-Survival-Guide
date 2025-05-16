@@ -30,5 +30,7 @@ theme:
 markdown_extensions:
   - admonition
   - codehilite
+  - pymdownx.highlight
   - toc:
       permalink: true
+
